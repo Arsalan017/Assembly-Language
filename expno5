@@ -1,0 +1,53 @@
+; Lab Experiment no.5:
+;     lab_Task_1 = To do output as: *
+;                                   **
+;                                   ***
+;                                   ****
+;                                   ***** 
+;
+;      Lab_Task_2 = Takes 5 single digit from user 
+;                   and print 3rd highest
+;
+;
+
+
+
+
+; je -> cmp al, bl        (al=bl)
+;         je label_name 
+                           
+ 
+; jg -> cmp al, bl        (al>bl)
+;          jg label_name
+
+; jge -> cmp al, bl       (al>=bl)
+;          jg label_name
+
+; jl -> cmp al, bl        (al<bl)
+;          jg label_name
+
+; jle -> cmp al, bl       (al<=bl)
+;          jg label_name 
+
+
+
+org 100h
+
+mov al, 3
+mov bl, 9
+
+cmp al, bl
+jg arsalan
+
+mov dl, 'B'
+mov ah, 02h
+int 21h
+
+ret
+
+arsalan:
+mov dl, 'A'      
+mov ah, 02h
+int 21h
+
+ret
